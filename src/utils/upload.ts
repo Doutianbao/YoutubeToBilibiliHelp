@@ -15,7 +15,8 @@ export const upload = async (changedInfo: IChangedInfo) => {
 
     log("启动浏览器...\n");
     const browser = await puppeteer.launch({
-        headless: !isDev, // 默认为true，无头模式
+        executablePath:"/usr/bin/google-chrome",
+        //headless: !isDev, // 默认为true，无头模式
         args: ["--no-sandbox"],
         slowMo: 250,
         userDataDir: puppeteerUserDataDir,
