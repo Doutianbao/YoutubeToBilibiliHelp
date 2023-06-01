@@ -58,7 +58,7 @@ const checkChange = async () => {
             // xxx #shorts #funny #reels #tech #programming #coding #meme
             const translationTitle = await translate(tagLessTitle, null, "zh-Hans");
             // publish_prefix xxx #shorts #funny #reels #tech #programming #coding #meme
-            const uploadTitle = channelItem.publish_prefix + translationTitle.translation?.slice(0, 80) || tagLessTitle || "文件名出问题啦～";
+            const uploadTitle = channelItem.publish_prefix + title || "文件名出问题啦～";
 
             const changedInfo: IChangedInfo = {
                 ...channelItem,
